@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Advanced Web Modifier",
+    "version": "2.0",
+    "description": "An advanced Chrome Extension to customize webpages with saved preferences.",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
